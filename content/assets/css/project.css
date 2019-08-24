@@ -127,6 +127,7 @@ body {
   line-height: 50px;
   float: left;
   margin-top: 16px;
+  padding-left: 9px;
   color: maroon;
 }
 #hl7-search {
