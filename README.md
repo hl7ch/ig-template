@@ -12,7 +12,7 @@ this is a very basic fhir implemenation guide template based on from the
 
 Refer to the IG template in your implementation guide with:
 ```json
-"template": "https://github.com/ahdis/test-template", 
+"template": "https://github.com/ahdis/ig-template", 
  ```
 
 * Provide [packages-list.json](https://wiki.hl7.org/index.php?title=FHIR_IG_PackageList_doco) in pages directory
