@@ -2,39 +2,66 @@
 category: History
 ---
 
-<!doctype html>
-<html lang="en">
-<head>
-  <title>History</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>History</title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  {% include header.html %}
+    <link href="{{site.data.info.assets}}fhir.css" rel="stylesheet"/>
+     
+    <!-- Bootstrap core CSS -->
+    <link href="{{site.data.info.assets}}assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="{{site.data.info.assets}}assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  
+    <!-- Project extras -->
+    <link href="{{site.data.info.assets}}assets/css/project.css" rel="stylesheet"/>
+    <link href="{{site.data.info.assets}}assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="{{site.data.info.assets}}assets/css/jquery-ui.css" rel="stylesheet"/>
+
+    {% include fragment-css.html %}
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
   <script type="application/javascript" src="assets/js/history-cm.js"> </script>
   <script type="application/javascript" src="assets/js/history.js"> </script>
-  <link href="assets/css/history.css" rel="stylesheet" />
 
-</head>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{site.data.info.assets}}assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{site.data.info.assets}}assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{site.data.info.assets}}assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="{{site.data.info.assets}}assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="{{site.data.info.assets}}assets/ico/favicon.png"/>
+  </head>
+  <body>
+      <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+                  {% include fhirlogo.html %}
 
-<body>
-
-
-
-  {% include navbar.html %}
-
-  {% include publish-box.html %}
-
-
-  <div id="segment-content" class="segment">
-    <!-- segment-content -->
-    <div class="container">
-      <!-- container -->
-      <div class="row">
-        <div class="inner-wrapper">
-          <!-- CONTENT CONTENT -->
-
-
-
-          <div class="col-12">
+            {% include logo.html %}
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">{{site.data.fhir.ig.title}}</span><br/>{{site.data.fhir.ig.version}} - {{status}}</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+    
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+          
+ 
+       <div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
 
             <b id="ig-title" style="visibility: hidden">{{site.data.fhir.igName}}</b>
 
@@ -45,7 +72,7 @@ category: History
             <!-- ============CONTENT CONTENT=============== -->
 
             <div id="history-data">see <a href="{{site.data.fhir.canonical}}/history.html">History of published
-                Implemenation Guides</a></div>
+                Implementation Guides</a></div>
             <style>
               #history-data table td {
                 padding-right: 1em;
@@ -60,16 +87,43 @@ category: History
 
 
         </div>
+ 
+ 
+ 
+   </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
 
-      </div> <!-- /inner-wrapper -->
-    </div> <!-- /row -->
-  </div> <!-- /container -->
-
-  </div> <!-- /segment-content -->
-
-  {% include footer.html %}
-
-  <!-- Include in the page -->
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; {{site.data.info.copyrightyear}} <a style="color: #81BEF7" href="{{site.data.fhir.ig.contact[0].telecom[0]}}">{{site.data.fhir.ig.publisher}}</a>.  Package {{site.data.fhir.packageId}}#{{site.data.fhir.igVer}} based on <a style="color: #81BEF7" href="{{site.data.fhir.path}}">FHIR {{site.data.fhir.version}}</a>. Generated <span title="{{site.data.fhir.genDate}}">{{site.data.fhir.genDate | date: "%Y-%m-%d"}}</span>
+          <br/>
+          <span style="color: #FFFF77">
+            {% include fragment-footer.html %}
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
   <script type="text/javascript">
   //<![CDATA[
     $.getJSON("../package-list.json", function (json) {
@@ -84,7 +138,9 @@ category: History
     });
   //]]>
   </script>
-  
-</body>
 
-</html>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>      

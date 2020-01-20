@@ -1,12 +1,10 @@
 # ahdis ig template for IG Publisher
 this is a very basic fhir implemenation guide template based on from the
-[FHIR/test-template](https://github.com/FHIR/test-template) for the [IG Publisher](https://wiki.hl7.org/IG_Publisher_Documentation)
+[fhir.base.template](https://github.com/HL7/ig-template-base) for the [IG Publisher](https://wiki.hl7.org/IG_Publisher_Documentation)
 
 ## Features
-* Home, Profile, Extension, Terminology Tab
+* Custom logos (see below)
 * History Page 
-* Mapping/Examples Tab for StructureDefinition
-* Publish box support
 
 ## Using the ig template
 
