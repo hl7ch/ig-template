@@ -1,5 +1,5 @@
 # ahdis ig template for IG Publisher
-this is a very basic fhir implemenation guide template based on from the
+this is a very basic fhir implementation guide template based on from the
 [fhir.base.template](https://github.com/HL7/ig-template-base) for the [IG Publisher](https://wiki.hl7.org/IG_Publisher_Documentation)
 
 ## Features
@@ -10,13 +10,13 @@ this is a very basic fhir implemenation guide template based on from the
 
 Refer to the IG template in your implementation guide with:
 ```json
-"template": "https://github.com/ahdis/ig-template", 
+"template": "ch.ahdis.ig.template#0.3.0", 
  ```
 
 * Provide [packages-list.json](https://wiki.hl7.org/index.php?title=FHIR_IG_PackageList_doco) in input/pagecontent directory
 
 ## Examples
-* [Swiss FHIR Implemenation Guide Github Template](https://github.com/ahdis/ch-ig)
+* [Swiss FHIR Implementation Guide Github Template](https://github.com/ahdis/ch-ig)
 * [Swiss CH Core Implementation Guide](http://build.fhir.org/ig/hl7ch/ch-core/index.html)
 
 ## Note on HL7/FHIR Logos
