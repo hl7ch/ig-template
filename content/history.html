@@ -156,7 +156,7 @@ var reHtmlBlockOpen = [
 var reHtmlBlockClose = [
    /./, // dummy for 0
    /<\/(?:script|pre|style)>/i,
-   /-->/,
+   /\-\->/,
    /\?>/,
    />/,
    /\]\]>/
@@ -1020,7 +1020,7 @@ var ATTRIBUTEVALUESPEC = "(?:" + "\\s*=" + "\\s*" + ATTRIBUTEVALUE + ")";
 var ATTRIBUTE = "(?:" + "\\s+" + ATTRIBUTENAME + ATTRIBUTEVALUESPEC + "?)";
 var OPENTAG = "<" + TAGNAME + ATTRIBUTE + "*" + "\\s*/?>";
 var CLOSETAG = "</" + TAGNAME + "\\s*[>]";
-var HTMLCOMMENT = "<!---->|<!--(?:-?[^>-])(?:-?[^-])*-->";
+var HTMLCOMMENT = "<!\-\-\-\->|<!\-\-(?:\-?[^>\-])(?:\-?[^\-])*\-\->";
 var PROCESSINGINSTRUCTION = "[<][?].*?[?][>]";
 var DECLARATION = "<![A-Z]+" + "\\s+[^>]*>";
 var CDATA = "<!\\[CDATA\\[[\\s\\S]*?\\]\\]>";
@@ -2659,7 +2659,6 @@ function item(node, entering) {
 
 function html_inline(node) {
   if (this.options.safe) {
-    this.lit('<!-- raw HTML omitted -->');
   } else {
     this.lit(node.literal);
   }
@@ -2668,7 +2667,6 @@ function html_inline(node) {
 function html_block(node) {
   this.cr();
   if (this.options.safe) {
-    this.lit('<!-- raw HTML omitted -->');
   } else {
     this.lit(node.literal);
   }
@@ -2676,19 +2674,27 @@ function html_block(node) {
 }
 
 function custom_inline(node, entering) {
-  if (entering && node.onEnter) {
-    this.lit(node.onEnter);
-  } else if (!entering && node.onExit) {
-    this.lit(node.onExit);
+  if (entering) {
+    if (node.onEnter) {
+        this.lit(node.onEnter);
+    }
+  } else if (!entering) {
+    if (node.onExit) {
+        this.lit(node.onExit);
+    }
   }
 }
 
 function custom_block(node, entering) {
   this.cr();
-  if (entering && node.onEnter) {
-    this.lit(node.onEnter);
-  } else if (!entering && node.onExit) {
-    this.lit(node.onExit);
+  if (entering) {
+    if (node.onEnter) {
+     this.lit(node.onEnter);
+    }
+  } else if (!entering) {
+    if (node.onExit) {
+        this.lit(node.onExit);
+    }
   }
   this.cr();
 }
