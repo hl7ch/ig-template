@@ -1,11 +1,11 @@
 {
-  "name": "ch.ahdis.ig.template",
-  "version": "0.3.0",
+  "name": "ch.fhir.ig.template",
+  "version": "0.4.0",
   "type": "fhir.template",
   "license": "CC0-1.0",
-  "author": "http://www.ahdis.ch",
+  "author": "HL7 Switzerland",
   "description": "FHIR IG Template",
-  "canonical": "http://ahdis.ch/ig/template",
+  "canonical": "http://fhir.ch/ig/template",
   "base": "fhir.base.template",
   "dependencies": {
     "fhir.base.template": "0.1.0"
