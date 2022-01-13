@@ -3,7 +3,7 @@ This is a very basic FHIR implementation guide template based on the
 [fhir.base.template](https://github.com/HL7/ig-template-base) for the [IG Publisher](https://wiki.hl7.org/IG_Publisher_Documentation).
 
 ## Features
-* Custom logos (see [note](#Note-on) below)
+* Custom logos (see [note](#note-on-hl7fhir-logos) below)
 * Propose a change link with is routed through Google Forms to GitHub
 
 ## Using the IG template
