@@ -42,4 +42,3 @@ feedback:
 6. In Script Editor to the left select Trigger (clock icon)
 7. Add Trigger for Submit Feedback, select Event Type On Form Submit (you need to confirm this with your google account)
 8. Back in the form, copy the link form Send form - link and put it in above field
-
