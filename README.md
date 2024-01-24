@@ -32,6 +32,9 @@ In your IG add (or create) to input/data/features.yml the following properties
 feedback:
     active: true
     formUrl: provide link (see below)
+analytics:
+    active: true
+    tagId: G-ED8VLFMEVY
 ```
 
 1. For the form request a copy of the feedback form https://docs.google.com/forms/d/1sdG-LgSlNaSDJ1HHABEVgmk0etXT-qZd-4bh2iBzUps/edit

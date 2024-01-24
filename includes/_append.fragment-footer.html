@@ -1,3 +1,13 @@
 {% if site.data.features.feedback.active %}
 | <a style="color: #81BEF7" target="_blank" href="{{site.data.features.feedback.formUrl}}&amp;entry%2E1353807103={{{site.data.fhir.packageId  | uri_escape }}%23{{site.data.fhir.igVer}}%20{{ page.url | uri_escape }}&amp;entry%2E247644557={{site.data.pages[page.path].title | uri_escape }}">Propose a change</a>
 {% endif %}
+
+{% if site.data.features.analytics.active %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{site.data.features.analytics.tagId | uri_escape}}"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{site.data.features.analytics.tagId}}');
+</script>
+{% endif %}
