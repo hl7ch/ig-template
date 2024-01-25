@@ -1,16 +1,22 @@
     <link href="{{site.data.info.assets}}assets/css/hl7.css" rel="stylesheet"/>
     <link href="{{site.data.info.assets}}assets/css/fhir.css" rel="stylesheet"/>
 
-
-    {% if site.data.features.css.navbar %}
     <style>
+    {% if site.data.features.css.navbar %}
     .navbar-inverse {
         background-color: #{{site.data.features.css.navbar}};
     }   
 
     #segment-footer > .container {
-      background-color: : #{{site.data.features.css.navbar}};
+      background-color: #{{site.data.features.css.navbar}};
     }
- 
-    </style>
     {% endif %}
+
+    {% if site.data.features.css.title %}
+    #ig-status {
+      color: #{{site.data.features.css.title}};
+    } 
+    {% endif %}
+
+    </style>
+ 

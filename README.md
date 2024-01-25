@@ -58,6 +58,7 @@ analytics:
 ```yaml
 css:
     navbar: ffffff
+    title: ffffff
 ```
 
 you can change the navigation bar color
