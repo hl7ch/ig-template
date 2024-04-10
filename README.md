@@ -58,6 +58,7 @@ analytics:
 ```yaml
 css:
     navbar: ffffff
+    hover: ffffff
     title: ffffff
 ```
 
