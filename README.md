@@ -36,10 +36,10 @@ feedback:
 
 1. For the form request a copy of the feedback form https://docs.google.com/forms/d/1sdG-LgSlNaSDJ1HHABEVgmk0etXT-qZd-4bh2iBzUps/edit
 2. Don't change the different entries, otherwise they will not be prefilled
-3. In the kebab menu select Script Editor
+3. In the kebab menu select Apps Script (former Script Editor)
 4. Adjust handle to GitHub repo organization where the IG lives in
 5. Adjust repo to GitHub repo name of the IG
-6. In Script Editor to the left select Trigger (clock icon)
+6. In Script Editor to the left select Triggers (clock icon)
 7. Add Trigger for Submit Feedback, select Event Type On Form Submit (you need to confirm this with your google account)
 8. Back in the form, copy the link form Send form - link and put it in above field
 
