@@ -1,6 +1,6 @@
 # HL7 Switzerland IG template for IG Publisher 
 
-This is a very basic FHIR implementation guide template based on the
+This is a basic FHIR implementation guide template based on the
 [fhir.base.template](https://github.com/HL7/ig-template-base) for the [IG Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation).
 
 ## Features
