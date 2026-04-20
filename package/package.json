@@ -6,8 +6,8 @@
   "author": "HL7 Switzerland",
   "description": "FHIR IG Template",
   "canonical": "http://fhir.ch/ig/template",
-  "base": "fhir.base.template",
+  "base": "fhir2.base.template",
   "dependencies": {
-    "fhir.base.template": "current"
+    "fhir2.base.template": "current"
   }
 }
